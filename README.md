@@ -42,9 +42,10 @@ Download the .js file and import it into your project. Add the script as a Compo
 | Parent Rotation Offset  	| Rotation of the parent object, used for calculating relative transform properties      	| vec4 (quat)  	| -                         	| N  	| parentRotOffset      	|
 
 ### Particle Properties
+These are the properties of each object within the Object Array
 
 |  Property 	|     Type    	| Description                                                                                  	|
-|:---------:	|:-----------:	|----------------------------------------------------------------------------------------------	|
+|:---------:	|:-----------:	|:----------------------------------------------------------------------------------------------	|
 |    obj    	| SceneObject 	| the instantiated object particle                                                             	|
 |  position 	|     vec3    	| the initial position of the particle                                                         	|
 |   speed   	|     vec3    	| the initial speed vector of the particle                                                     	|
@@ -53,5 +54,5 @@ Download the .js file and import it into your project. Add the script as a Compo
 |   scale   	|   [float]   	| a 2-element array describing the initial and final scales of the object                      	|
 |  lifetime 	|     int     	| time in milliseconds that the particle should remain in the scene                            	|
 | startTime 	|     int     	| timestamp of the initial spawn time of the particle                                          	|
-|  friction 	|     int     	| counter variable used to determine how much friction should affect the speed of the particle 	|
+|  friction 	|     int     	| counter variable used to determine how much friction should affect the speed of the particle based on the global frictionFactor 	|
 | materials 	|  [Material] 	| an array of clones of all materials found in prefab object, for use in fade in/out           	|
