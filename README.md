@@ -10,7 +10,7 @@ This script file creates an interface for adding a 3D particle effect to your sc
 Download the .js file and import it into your project. Add the script as a Component to an object in your scene - preferably the object you'd like to parent your particles to.
 
 ### Properties
-| Property                	| Description                                                                            	|     type     	|        constraints        	| UI 	|        API key       	|
+| Property                	| Description                                                                            	|     Type     	|        Constraints        	| UI 	|        API key       	|
 |-------------------------	|----------------------------------------------------------------------------------------	|:------------:	|:-------------------------:	|:--:	|:--------------------:	|
 | Enabled                 	| toggle the emission of new particles                                                   	|     bool     	|             -             	|  Y 	|        enabled       	|
 | Emitter Type            	| dropdown specifying local or world space                                               	|      int     	|    0 (local), 1 (world)   	|  Y 	|         type         	|
@@ -43,22 +43,15 @@ Download the .js file and import it into your project. Add the script as a Compo
 
 ### Particle Properties
 
-**obj** (SceneObejct) The instantiated object
-
-**position** (vec3) The initial position of the object
-
-**speed** (vec3) The initial speed vector
-
-**rotSpeed** (vec3) The initial rotational speed vector
-
-**rotOffset** (vec3) The parent's rotational offset at the time of instantiation
-
-**scale** ([floats]) An array of the start and end scales of the object
-
-**lifetime** (int) Number of milliseconds particle should exist
-
-**startTime** (int) Timestamp (ms) of instantiation
-
-**friction** (int) Incrementing counter for how much friction affects the objects change in position
-
-**materials** ([Materials]) An array of all materials found in the emitter object for use in fading in/out
+|  Property 	|     Type    	| Description                                                                                  	|
+|:---------:	|:-----------:	|----------------------------------------------------------------------------------------------	|
+|    obj    	| SceneObject 	| the instantiated object particle                                                             	|
+|  position 	|     vec3    	| the initial position of the particle                                                         	|
+|   speed   	|     vec3    	| the initial speed vector of the particle                                                     	|
+|  rotSpeed 	|     vec3    	| the initial rotational speed of the particle (radians)                                       	|
+| rotOffset 	| vec4 (quat) 	| a quat describing the rotation of the parent object at startTime                             	|
+|   scale   	|   [float]   	| a 2-element array describing the initial and final scales of the object                      	|
+|  lifetime 	|     int     	| time in milliseconds that the particle should remain in the scene                            	|
+| startTime 	|     int     	| timestamp of the initial spawn time of the particle                                          	|
+|  friction 	|     int     	| counter variable used to determine how much friction should affect the speed of the particle 	|
+| materials 	|  [Material] 	| an array of clones of all materials found in prefab object, for use in fade in/out           	|
