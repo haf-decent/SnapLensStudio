@@ -4,7 +4,7 @@ Script files for use in Snapchat's [Lens Studio](https://lensstudio.snapchat.com
 ## 3D Emitter
 This script file creates an interface for adding a 3D particle effect to your scene. It uses ObjectPrefabs to dynamically instantiate new copies and includes fun features like simulated physics/collisions and an open API for you to access with other scripts.
 
-![UI Screenshot](3D Emitter Screenshot.png)
+![UI Screenshot](https://github.com/haf-decent/SnapLensStudio/blob/master/3D%20Emitter%20Screenshot.png)
 
 ### Installation
 Download the .js file and import it into your project. Add the script as a Component to an object in your scene - preferably the object you'd like to parent your particles to.
