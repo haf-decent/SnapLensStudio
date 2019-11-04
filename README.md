@@ -39,4 +39,24 @@ Download the .js file and import it into your project. Add the script as a Compo
 | Object Array            	| Array of objects describing the individual particles still active in the scene         	| [{}]         	| -                         	| N  	| objects              	|
 | Parent Rotation Offset  	| Rotation of the parent object, used for calculating relative transform properties      	| vec4 (quat)  	| -                         	| N  	| parentRotOffset      	|
 
+### Particle Properties
 
+**obj** (SceneObejct) The instantiated object
+
+**position** (vec3) The initial position of the object
+
+**speed** (vec3) The initial speed vector
+
+**rotSpeed** (vec3) The initial rotational speed vector
+
+**rotOffset** (vec3) The parent's rotational offset at the time of instantiation
+
+**scale** ([floats]) An array of the start and end scales of the object
+
+**lifetime** (int) Number of milliseconds particle should exist
+
+**startTime** (int) Timestamp (ms) of instantiation
+
+**friction** (int) Incrementing counter for how much friction affects the objects change in position
+
+**materials** ([Materials]) An array of all materials found in the emitter object for use in fading in/out
