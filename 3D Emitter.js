@@ -148,7 +148,7 @@ function emit(now) {
     // world space
     else if (script.api.type == 1) {
         // set root as target (particle parent object)
-        var target = global.scene.getRootObject(0);
+        var target = getRootParent(script.api.parent);
         // set initial position offset to the parent object's world position relative to the root object
         var offset = script.api.parent.getTransform().getWorldPosition().sub(target.getTransform().getWorldPosition());
         // track parent rotation
@@ -268,6 +268,13 @@ function getMaterials(details, obj, fadeFunc) {
         }
     }
 }
+// recursively get parent root object
+function getRootParent(obj) {
+    return obj.hasParent() ?
+        getRootParent(obj.getParent()):
+        obj;
+}
+
 // setup update event to track world time and run functions
 var uEvent = script.createEvent('UpdateEvent');
 uEvent.bind(function(event) {
